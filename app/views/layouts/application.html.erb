@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Heart</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Heart</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
 
-  <body>
+<body data-controller="app" class="bg-body-secondary">
+<%= render partial: 'layouts/default/menu' %>
+<div>
+  <header>
+    <%= render partial: 'layouts/default/navbar' %>
+    <%= render partial: 'layouts/default/spoor' %>
+  </header>
+  <main data-app-target="main">
+    <%= render partial: 'layouts/default/breadcrumb' %>
     <%= yield %>
-  </body>
+  </main>
+  <%= render partial: 'layouts/default/footer' %>
+</div>
+</body>
 </html>

@@ -1,0 +1,37 @@
+$app-width: 100vw;
+$app-height: 100vh;
+$app-menu-width: 260px;
+$app-navbar-height: 100px;
+$app-spoor-height: 40px;
+$app-footer-height: 40px;
+
+body {
+  width: $app-width;
+  height: $app-height;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: $app-menu-width auto;
+}
+
+aside {
+  width: $app-menu-width;
+}
+
+header .navbar {
+  height: $app-navbar-height;
+}
+
+header .spoor {
+  height: $app-spoor-height;
+}
+
+main {
+  height: calc($app-height - $app-navbar-height - $app-spoor-height - $app-footer-height);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: $app-footer-height;
+}
