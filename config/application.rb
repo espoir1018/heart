@@ -28,3 +28,7 @@ module Heart
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+require 'string_utils'
+require 'number_utils'
+require 'hash_utils'
