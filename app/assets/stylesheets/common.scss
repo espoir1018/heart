@@ -1,3 +1,17 @@
 hr.no-spacing {
   margin: 0!important;
 }
+
+.dropdown-toggle.no-icon::after {
+  display: none;
+}
+
+.border-none {
+  border: none!important;
+}
+
+@media (min-width: 992px) {
+  .border-lg {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+}
