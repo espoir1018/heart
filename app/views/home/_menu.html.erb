@@ -1,0 +1,26 @@
+<ul class="nav nav-pills flex-column gap-1" data-controller="menu-main">
+  <%= menu_tag('工作台', 'command', root_path, compare: { home: [:index] }) %>
+  <%= menu_tag('分析页', 'graph-up-arrow', root_path, compare: { home: [:analyze] }) %>
+
+  <%= menu_title('DEMO') %>
+  <%= menu_tag('单个菜单', 'patch-plus', root_path) %>
+  <%= menu_tag('这是一个文字超级超级长的菜单', 'plus-slash-minus', root_path) %>
+  <%= menu_tag('菜单和数字标', '6-square-fill', root_path, count: rand(1..9) * rand(1..99)) %>
+  <%= menu_tag('这是一个文字超级超级长的菜单和数字标', '9-circle', root_path, count: rand(1..9) * rand(1..99)) %>
+  <%= toggle_menu_tag('菜单组', 'bar-chart', compare: { one: [] }) do %>
+    <ul class="nav nav-pills flex-column ms-3 gap-1 py-1">
+      <%= menu_tag('单个菜单', 'patch-plus', root_path) %>
+      <%= menu_tag('这是一个文字超级超级长的菜单', 'plus-slash-minus', root_path) %>
+      <%= menu_tag('菜单和数字标', '6-square-fill', root_path, count: rand(1..9) * rand(1..99)) %>
+      <%= menu_tag('这是一个文字超级超级长的菜单和数字标', '9-circle', root_path, count: rand(1..9) * rand(1..99)) %>
+    </ul>
+  <% end %>
+  <%= toggle_menu_tag('这是一个文字超级超级长的菜单组', 'bank', compare: { two: [] }) do %>
+    <ul class="nav nav-pills flex-column ms-3 gap-1 py-1">
+      <%= menu_tag('单个菜单', 'patch-plus', root_path) %>
+      <%= menu_tag('这是一个文字超级超级长的菜单', 'plus-slash-minus', root_path) %>
+      <%= menu_tag('菜单和数字标', '6-square-fill', root_path, count: rand(1..9) * rand(1..99)) %>
+      <%= menu_tag('这是一个文字超级超级长的菜单和数字标', '9-circle', root_path, count: rand(1..9) * rand(1..99)) %>
+    </ul>
+  <% end %>
+</ul>

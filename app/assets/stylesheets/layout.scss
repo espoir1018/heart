@@ -1,37 +1,43 @@
-$app-width: 100vw;
-$app-height: 100vh;
-$app-menu-width: 260px;
-$app-navbar-height: 100px;
-$app-spoor-height: 40px;
-$app-footer-height: 40px;
-
 body {
-  width: $app-width;
-  height: $app-height;
+  --app-width: 100vw;
+  --app-height: 100vh;
+  width: var(--app-width);
+  height: var(--app-height);
   overflow: hidden;
-  display: grid;
-  grid-template-columns: $app-menu-width auto;
-}
-
-aside {
-  width: $app-menu-width;
-}
-
-header .navbar {
-  height: $app-navbar-height;
-}
-
-header .spoor {
-  height: $app-spoor-height;
-}
-
-main {
-  height: calc($app-height - $app-navbar-height - $app-spoor-height - $app-footer-height);
-  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
-footer {
-  height: $app-footer-height;
+.app-menu {
+  --app-menu-width: 280px;
+
+  &.app-menu--systolic {
+    --app-menu-width: 56px;
+  }
+}
+
+.app-main .app-header,
+.app-main .app-footer {
+  flex-shrink: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  .app-menu {
+    --app-menu-width: 0;
+    -webkit-animation: scale-down-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-down-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  body.open-menu {
+    .app-menu {
+      display: flex!important;
+      position: fixed;
+      z-index: 999;
+      --app-menu-width: 100vw;
+      -webkit-animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+  }
+
 }

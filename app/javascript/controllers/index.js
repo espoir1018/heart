@@ -6,3 +6,9 @@ import { application } from "./application"
 
 import AppController from "./app_controller"
 application.register("app", AppController)
+
+import MenuController from "./layouts/menu/menu_controller"
+application.register("menu", MenuController)
+
+import MenuMainController from "./layouts/menu/menu_main_controller"
+application.register("menu-main", MenuMainController)

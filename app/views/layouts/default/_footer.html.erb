@@ -1,3 +1,23 @@
-<footer class="bg-danger-subtle">
-  底部信息
+<footer class="app-footer flex-shrink-0 bg-body-tertiary link-body-emphasis border-top">
+  <div class="container d-flex flex-nowrap justify-content-sm-end justify-content-around align-items-center gap-sm-2">
+    <button class="btn border-none d-flex flex-column align-items-center d-block d-sm-none">
+      <%= bs_icon_tag('bell-fill', class: 'bi', width: 20, height: 20, fill: 'currentColor') %>
+      <span>通知</span>
+    </button>
+    <button class="btn border-none d-flex flex-column align-items-center d-block d-sm-none">
+      <%= bs_icon_tag('house-heart', class: 'bi', width: 20, height: 20, fill: 'currentColor') %>
+      <span>首页</span>
+    </button>
+    <button class="btn border-none d-flex flex-column align-items-center d-block d-sm-none">
+      <%= bs_icon_tag('arrow-repeat', class: 'bi', width: 20, height: 20, fill: 'currentColor') %>
+      <span>刷新</span>
+    </button>
+    <button class="btn border-none d-flex flex-column align-items-center d-block d-sm-none">
+      <%= bs_icon_tag('person', class: 'bi', width: 20, height: 20, fill: 'currentColor') %>
+      <span>我的</span>
+    </button>
+    <button class="btn border-none d-flex flex-column align-items-center d-sm-block d-none" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="返回顶部">
+      <%= bs_icon_tag('chevron-bar-up', class: 'bi', width: 28, height: 28, fill: 'currentColor') %>
+    </button>
+  </div>
 </footer>
