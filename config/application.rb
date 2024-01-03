@@ -26,6 +26,16 @@ module Heart
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :address => 'smtp.163.com',
+      :domain => 'mail.163.com',
+      :port => 25,
+      :enable_starttls_auto => true,
+      :authentication => :plain,
+      :user_name => ENV["SMTP_MAIL_USERNAME"],
+      :password => ENV["SMTP_MAIL_PASSWORD"],
+    }
   end
 end
 
