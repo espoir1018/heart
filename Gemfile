@@ -76,3 +76,4 @@ end
 gem 'config'
 
 gem "lograge"
+gem "logstash-event"
