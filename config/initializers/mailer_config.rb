@@ -10,4 +10,5 @@ Rails.application.configure do
     :password => ENV["SMTP_MAIL_PASSWORD"],
   }
   config.action_mailer.logger = ActiveSupport::Logger.new("log/mailer.log")
+  config.action_mailer.observers = %w[MailerObserver]
 end
