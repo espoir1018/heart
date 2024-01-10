@@ -77,3 +77,5 @@ gem 'config'
 
 gem "lograge"
 gem "logstash-event"
+
+gem 'view_component'
