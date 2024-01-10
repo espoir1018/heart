@@ -12,3 +12,6 @@ application.register("menu", MenuController)
 
 import MenuMainController from "./layouts/menu/menu_main_controller"
 application.register("menu-main", MenuMainController)
+
+import ToastrController from "./toastr_controller"
+application.register("toastr", ToastrController)

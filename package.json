@@ -18,6 +18,7 @@
     "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
     "sass": "^1.69.5",
+    "toastr": "^2.1.4",
     "trix": "^2.0.8"
   },
   "scripts": {
