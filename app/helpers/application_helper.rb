@@ -6,4 +6,10 @@ module ApplicationHelper
     end
   end
 
+  def toastr_flash_tag
+    turbo_frame_tag :toastr_flash, target: '_top', class: "app-toastr" do
+      render(FlashComponent.with_collection(flash.to_a))
+    end
+  end
+
 end

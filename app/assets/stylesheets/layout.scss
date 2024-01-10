@@ -22,6 +22,15 @@ body {
   flex-shrink: 0;
 }
 
+.app-toastr {
+  display: none;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  z-index: -999;
+}
+
 @include media-breakpoint-down(sm) {
   .app-menu {
     --app-menu-width: 0;
@@ -31,7 +40,7 @@ body {
 
   body.open-menu {
     .app-menu {
-      display: flex!important;
+      display: flex !important;
       position: fixed;
       z-index: 999;
       --app-menu-width: 100vw;
