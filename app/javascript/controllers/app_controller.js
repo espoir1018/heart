@@ -4,7 +4,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
 // Connects to data-controller="app"
 export default class extends Controller {
 
-  static targets = ["menu", "main"]
+  static targets = ["aside", "main"]
 
   connect() {
     const mainPsb = new PerfectScrollbar(this.mainTarget, {
@@ -15,12 +15,12 @@ export default class extends Controller {
     });
   }
 
-  toggle_menu() {
-    this.menuTarget.classList.remove('d-none')
-    this.element.classList.add('open-menu')
+  toggle_aside() {
+    this.asideTarget.classList.remove('d-none')
+    this.element.classList.add('open-aside')
 
-    const menuController = this.application.getControllerForElementAndIdentifier(this.menuTarget, 'menu')
-    menuController.scroll();
+    const asideController = this.application.getControllerForElementAndIdentifier(this.asideTarget, 'aside')
+    asideController.scroll();
   }
 
 }

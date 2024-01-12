@@ -1,4 +1,4 @@
-<aside class="app-menu flex-shrink-0 d-sm-flex d-none flex-column flex-nowrap bg-body-tertiary <%= systolic_class if is_systolic? %>" data-app-target="menu" data-controller="menu" data-menu-systolic-class="<%= systolic_class %>">
+<aside class="app-aside flex-shrink-0 d-sm-flex d-none flex-column flex-nowrap bg-body-tertiary <%= @systolic_class %>" data-app-target="aside" data-controller="aside" data-aside-systolic-class="<%= systolic_class %>">
   <div class="header shadow p-2">
     <a href="/" class="logo d-flex align-items-center gap-2 link-body-emphasis text-decoration-none tooltipster" data-bs-placement="right" data-bs-title="HEART">
       <%= bs_icon_tag('hearts', class: 'bi pe-none', width: 32, height: 40, fill: '#AA0000') %>
@@ -6,22 +6,22 @@
     </a>
   </div>
 
-  <%= turbo_frame_tag :menu_main, target: '_top', class: "flex-grow-1 p-2 position-relative", 'data-menu-target': "main" do %>
-    <%= render 'home/menu' %>
+  <%= turbo_frame_tag :menu, target: '_top', class: "flex-grow-1 p-2 position-relative", 'data-aside-target': "menu" do %>
+    <%= render(MenuComponent.new) %>
   <% end %>
 
   <div class="footer border-top">
-    <%= button_to "refresh", { controller: 'home', action: 'menu' }, class: 'd-none', 'data-menu-target': 'refresh' %>
+    <%= button_to "refresh", { controller: 'home', action: 'menu' }, class: 'd-none', 'data-aside-target': 'refresh' %>
     <div class="d-flex justify-content-around align-items-center">
-      <button class="btn border-none d-flex align-items-center gap-1 systolic-none" data-action="click->menu#scroll">
+      <button class="btn border-none d-flex align-items-center gap-1 systolic-none" data-action="click->aside#scroll">
         <%= bs_icon_tag('crosshair', class: 'bi flex-shrink-0', width: 28, height: 28, fill: 'currentColor') %>
         <span class="flex-grow-1 text-break systolic-none">定位</span>
       </button>
-      <button class="btn border-none d-flex align-items-center gap-1 systolic-none" data-action="click->menu#refresh">
+      <button class="btn border-none d-flex align-items-center gap-1 systolic-none" data-action="click->aside#refresh">
         <%= bs_icon_tag('arrow-repeat', class: 'bi flex-shrink-0', width: 28, height: 28, fill: 'currentColor') %>
         <span class="flex-grow-1 text-break systolic-none">刷新</span>
       </button>
-      <button class="btn border-none d-flex align-items-center gap-1 menu-toggle-btn tooltipster" data-action="click->menu#toggle" data-bs-placement="right" data-bs-title="展开">
+      <button class="btn border-none d-flex align-items-center gap-1 aside-toggle-btn tooltipster" data-action="click->aside#toggle" data-bs-placement="right" data-bs-title="展开">
         <%= bs_icon_tag('text-indent-right', class: 'bi flex-shrink-0', width: 28, height: 28, fill: 'currentColor') %>
         <span class="flex-grow-1 text-break systolic-none">收起</span>
       </button>

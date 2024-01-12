@@ -9,11 +9,11 @@ body {
   flex-wrap: nowrap;
 }
 
-.app-menu {
-  --app-menu-width: 280px;
+.app-aside {
+  --app-aside-width: 280px;
 
-  &.app-menu--systolic {
-    --app-menu-width: 56px;
+  &.app-aside--systolic {
+    --app-aside-width: 56px;
   }
 }
 
@@ -32,18 +32,18 @@ body {
 }
 
 @include media-breakpoint-down(sm) {
-  .app-menu {
-    --app-menu-width: 0;
+  .app-aside {
+    --app-aside-width: 0;
     -webkit-animation: scale-down-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: scale-down-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
-  body.open-menu {
-    .app-menu {
+  body.open-aside {
+    .app-aside {
       display: flex !important;
       position: fixed;
       z-index: 999;
-      --app-menu-width: 100vw;
+      --app-aside-width: 100vw;
       -webkit-animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
       animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }

@@ -1,0 +1,27 @@
+<ul class="nav nav-pills flex-column gap-1" data-controller="menu">
+  <%= render(MenuItemComponent.new(text: '工作台', icon: 'command', path: root_path, compare: { home: [:index] })) %>
+  <%= render(MenuItemComponent.new(text: '分析页', icon: 'graph-up-arrow', path: root_path, compare: { home: [:analyze] })) %>
+
+  <%= helpers.menu_title('DEMO') %>
+  <%= render(MenuItemComponent.new(text: '单个菜单', icon: 'patch-plus', path: root_path)) %>
+  <%= render(MenuItemComponent.new(text: '这是一个文字超级超级长的菜单', icon: 'plus-slash-minus', path: root_path)) %>
+  <%= render(MenuItemComponent.new(text: '菜单和数字标', icon: '6-square-fill', path: root_path, count: rand(1..9) * rand(1..99))) %>
+  <%= render(MenuItemComponent.new(text: '这是一个文字超级超级长的菜单和数字标', icon: '9-circle', path: root_path, count: rand(1..9) * rand(1..99))) %>
+  <%= render(MenuGroupComponent.new(text: '菜单组', icon: 'bar-chart', compare: { one: [] })) do %>
+    <ul class="nav nav-pills flex-column ms-3 gap-1 py-1">
+      <%= render(MenuItemComponent.new(text: '单个菜单', icon: 'patch-plus', path: root_path)) %>
+      <%= render(MenuItemComponent.new(text: '这是一个文字超级超级长的菜单', icon: 'plus-slash-minus', path: root_path)) %>
+      <%= helpers.menu_title('菜单组下标题') %>
+      <%= render(MenuItemComponent.new(text: '菜单和数字标', icon: '6-square-fill', path: root_path, count: rand(1..9) * rand(1..99))) %>
+      <%= render(MenuItemComponent.new(text: '这是一个文字超级超级长的菜单和数字标', icon: '9-circle', path: root_path, count: rand(1..9) * rand(1..99))) %>
+    </ul>
+  <% end %>
+  <%= render(MenuGroupComponent.new(text: '这是一个文字超级超级长的菜单组', icon: 'bank', compare: { two: [] })) do %>
+    <ul class="nav nav-pills flex-column ms-3 gap-1 py-1">
+      <%= render(MenuItemComponent.new(text: '单个菜单', icon: 'patch-plus', path: root_path)) %>
+      <%= render(MenuItemComponent.new(text: '这是一个文字超级超级长的菜单', icon: 'plus-slash-minus', path: root_path)) %>
+      <%= render(MenuItemComponent.new(text: '菜单和数字标', icon: '6-square-fill', path: root_path, count: rand(1..9) * rand(1..99))) %>
+      <%= render(MenuItemComponent.new(text: '这是一个文字超级超级长的菜单和数字标', icon: '9-circle', path: root_path, count: rand(1..9) * rand(1..99))) %>
+    </ul>
+  <% end %>
+</ul>

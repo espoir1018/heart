@@ -12,4 +12,9 @@ module ApplicationHelper
     end
   end
 
+  def app_cookies
+    cookies
+  end
+
+
 end

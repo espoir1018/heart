@@ -7,11 +7,11 @@ import { application } from "./application"
 import AppController from "./app_controller"
 application.register("app", AppController)
 
-import MenuController from "./layouts/menu/menu_controller"
-application.register("menu", MenuController)
+import AsideController from "./aside_controller"
+application.register("aside", AsideController)
 
-import MenuMainController from "./layouts/menu/menu_main_controller"
-application.register("menu-main", MenuMainController)
+import MenuController from "./menu_controller"
+application.register("menu", MenuController)
 
 import ToastrController from "./toastr_controller"
 application.register("toastr", ToastrController)

@@ -1,8 +1,8 @@
-.app-menu {
+.app-aside {
   --focus-bg: rgba(var(--bs-dark-rgb), .1);
 
   height: 100vh;
-  width: var(--app-menu-width);
+  width: var(--app-aside-width);
   transition: width 400ms;
   -webkit-transition: width 400ms;
 
@@ -76,7 +76,7 @@
     -webkit-transition: margin-left 400ms;
   }
 
-  &.app-menu--systolic {
+  &.app-aside--systolic {
 
     .systolic-none {
       display: none!important;
@@ -123,7 +123,7 @@
       margin-left: 0 !important;
     }
 
-    .menu-toggle-btn svg {
+    .aside-toggle-btn svg {
       transform: rotate(180deg);
     }
 
