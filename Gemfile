@@ -79,3 +79,5 @@ gem "lograge"
 gem "logstash-event"
 
 gem 'view_component'
+
+gem "paranoia"
