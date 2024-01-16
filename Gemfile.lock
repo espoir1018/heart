@@ -162,6 +162,7 @@ GEM
       activesupport (>= 5.0.0)
     jsbundling-rails (1.2.1)
       railties (>= 6.0.0)
+    jwt (2.7.1)
     lograge (0.14.0)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -328,6 +329,7 @@ DEPENDENCIES
   image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
+  jwt
   lograge
   logstash-event
   paranoia

@@ -81,3 +81,5 @@ gem "logstash-event"
 gem 'view_component'
 
 gem "paranoia"
+
+gem 'jwt'
