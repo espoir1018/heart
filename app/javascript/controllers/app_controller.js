@@ -23,4 +23,10 @@ export default class extends Controller {
     asideController.scroll();
   }
 
+  scrollTop() {
+    $(this.mainTarget).animate({
+      scrollTop: 0
+    }, 400);
+  }
+
 }

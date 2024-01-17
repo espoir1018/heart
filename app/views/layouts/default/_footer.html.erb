@@ -16,7 +16,7 @@
       <%= bs_icon_tag('person', class: 'bi', width: 20, height: 20, fill: 'currentColor') %>
       <span>我的</span>
     </button>
-    <button class="btn border-none d-flex flex-column align-items-center d-sm-block d-none" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="返回顶部">
+    <button class="btn border-none d-flex flex-column align-items-center d-sm-block d-none" data-action="click->app#scrollTop" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="返回顶部">
       <%= bs_icon_tag('chevron-bar-up', class: 'bi', width: 28, height: 28, fill: 'currentColor') %>
     </button>
   </div>
