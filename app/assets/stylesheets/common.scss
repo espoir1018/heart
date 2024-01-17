@@ -15,3 +15,7 @@ hr.no-spacing {
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
   }
 }
+
+.breadcrumb {
+  margin-top: var(--bs-breadcrumb-margin-bottom);
+}
