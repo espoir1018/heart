@@ -13,11 +13,9 @@
 <body data-controller="app" class="bg-body-secondary">
 <%= render(AsideComponent.new) %>
 <div class="app-main flex-grow-1 d-flex flex-column flex-nowrap">
-  <%= render partial: 'layouts/default/navbar' %>
-  <main class="app-content flex-grow-1" data-app-target="main">
-    <%= yield %>
-  </main>
-  <%= render partial: 'layouts/default/footer' %>
+  <%= render(HeaderComponent.new(user: current_user)) %>
+  <main class="app-content flex-grow-1" data-app-target="main"><%= yield %></main>
+  <%= render(FooterComponent.new(user: current_user)) %>
 </div>
 <%= toastr_flash_tag %>
 </body>
